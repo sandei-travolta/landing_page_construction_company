@@ -14,9 +14,9 @@ const Services = () => {
                 <div className='flex flex-col lg:flex-row'>
                     <div className='lg:w-1/2 h-80 lg:h-auto'
                         style={{
-                            "background-image": "url('../images/engineer.jpg')",
-                            "background-size": "cover",
-                            "background-position": 'center'
+                            backgroundImage: "url('../images/engineer.jpg')",
+                            backgroundSize: "cover",
+                            backgroundPosition: 'center'
                         }}
                     >
                 

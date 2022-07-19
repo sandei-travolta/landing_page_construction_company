@@ -3,9 +3,9 @@ import React from 'react'
 const TeamMemberCard = ({name , title , image}) => {
     return <div className='card w-full relative md:row-span-3 h-450  md:h-full '
                 style={{
-                    'background-image': `url('../images/${image}')`,
-                    'background-position': 'center',
-                    'background-size': 'cover'
+                    backgroundImage: `url('../images/${image}')`,
+                    backgroundSize: "cover",
+                    backgroundPosition: 'center'
                 }}
     >
                 <div className='absolute left-0 bottom-0 right-10 -mb-1 -ml-1 bg-white px-7 py-5'>
