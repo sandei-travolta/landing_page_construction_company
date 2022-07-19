@@ -10,7 +10,7 @@ import Clients from './sections/Clients'
 import Projects from './sections/Projects'
 import Footer from './sections/Footer'
 
-function App() {
+function App() {  
   return (
     <div>
       <Navbar />

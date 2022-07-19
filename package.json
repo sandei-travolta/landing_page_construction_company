@@ -2,10 +2,7 @@
   "name": "landing-page-construction-company",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://abdullah-umar-ali.github.io/landing_page_construction_company",
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy": "gh-pages -d build", 
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -40,7 +37,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",
-    "gh-pages": "^4.0.0",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.6"
   }
