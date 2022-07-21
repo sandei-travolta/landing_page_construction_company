@@ -25,9 +25,9 @@ const OurTeam = () => {
                     <h3 className="text-3xl font-bold pb-7 capitalize text-center lg:text-start"> meet our <br/> team members</h3>
             </div>
         {
-            teamMembersData.map(teamMember => {
+            teamMembersData.map((teamMember , ind) => {
                 return(
-                    <TeamMemberCard name={teamMember.name} title={teamMember.title} image={teamMember.image}/>
+                    <TeamMemberCard key={ind} name={teamMember.name} title={teamMember.title} image={teamMember.image}/>
                 )
             })
         }

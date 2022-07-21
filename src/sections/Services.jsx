@@ -55,9 +55,10 @@ const Services = () => {
                 </div>
                 <div className='flex flex-wrap '>
                         {
-                            servicesData.map(service => {
+                            servicesData.map((service , ind) => {
                                 return (
                                     <ServiceCard 
+                                        key={ind}
                                         heading= {service.heading}
                                         text={service.text}
                                         icon={service.icon}

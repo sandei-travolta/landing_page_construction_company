@@ -8,7 +8,7 @@ const Gallery = ({ currentImg,  setCurrentImg, nextImg,previousImg }) => {
     };
   
     return (
-      < div className="z-50">
+      < div className="z-50 select-none	">
         <div className="overlay flex items-center fixed top-0 left-0 right-0 w-full h-full dismiss" style={{backgroundColor: "rgba(0,0,0,0.9)"}} >
           <img className="block my-16 mx-auto shadow-lg" style={{maxWidth: "60%" , maxHeight: "80%"}} src={currentImg} alt="bigger pic" />
           <span className="dismiss text-white absolute top-5 right-5 lg:right-10 text-3xl z-50 cursor-pointer" onClick={hideGallery}>

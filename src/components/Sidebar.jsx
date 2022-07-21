@@ -1,23 +1,27 @@
 import SocilMediaLink from "./SocialMediaLink";
 import { faTwitter, faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useAppState } from "../context/AppContext";
+import {  useMenu } from "../context/MenuContext";
 import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
+import { pageSections } from "../data/sectoins";
+import { useSection } from "../context/SectionsContext";
 
+const NavigationLink = ({ children,  sectionId }) => {
+    const {activeSectionId ,setActiveSectionId} = useSection()
 
-const NavigationLink = ({ children, href }) => {
     return (
-        <a href={`#${href}`}>
-            <li className="hover:bg-main-primary px-4 py-3 transition-colors duration-300">
+            <li 
+                className={`cursor-pointer uppercase hover:bg-main-primary px-4 py-3 transition-colors duration-300 ${activeSectionId === sectionId ? "bg-main-primary" : "bg-main-black"} `}
+                onClick={() => { setActiveSectionId(sectionId) }} 
+                >
                 {children}
             </li>
-        </a>
     )
 }
 
 
 const SideBar = () => {
-    const { menu } = useAppState()
+    const { menu } = useMenu()
 
     return (
         <div 
@@ -25,11 +29,13 @@ const SideBar = () => {
           ` }>
             <div className="flex flex-col justify-between h-full">
                 <ul className="flex flex-col ">
-                    <NavigationLink href=""> Home </NavigationLink>
-                    <NavigationLink href="about"> About </NavigationLink>
-                    <NavigationLink href="services"> Our Services </NavigationLink>
-                    <NavigationLink href="projects"> Projects</NavigationLink>
-                    <NavigationLink href="contact-us"> Contact Us</NavigationLink>
+                {
+              pageSections.map((section , ind) => {
+                return(
+                  <NavigationLink key={ind} sectionId={section.sectionId} >{section.sectionName}</NavigationLink>
+                )
+              })
+            }
                 </ul>
 
 

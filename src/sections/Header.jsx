@@ -7,7 +7,7 @@ import SocilMediaLink from '../components/SocialMediaLink';
 
 const Header = () => {
   return (
-    <div className=''>
+    <div id='home' className=''>
         <div className='flex w-full'>
             <div className='left-section relative hidden lg:block   w-1/3 max-h-786 lg:max-h-full bg-main-black' style={{height:"110vh" , maxWidth:"700px"}} >
                     <div className='absolute -left-20 bottom-0 text-white flex flex-col items-center justify-center gap-5'>

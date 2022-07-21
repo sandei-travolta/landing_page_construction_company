@@ -30,7 +30,7 @@ const about = () => {
                             className="stroke-heading font-black font-serif -mb-5"
                         >25
 
-                            <style jsx>{`
+                            <style jsx="true">{`
                                  h2.stroke-heading {
                                     background-image :url('../images/main-slider-3.jpg'); 
                                     font-size:200px;

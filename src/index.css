@@ -42,6 +42,11 @@ code {
   border-radius: 50px;
 }
 
+::selection {
+  background: #ffb142;
+  color: white
+}
+
 
 
 @tailwind base;

@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import SocilMediaLink from '../components/SocialMediaLink'
 import { faTwitter, faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
-
 const Footer = () => {
+  const footerRef = useRef()  
+
+
   return (
-    <footer className='bg-gray-900 flex flex-col justify-center items-center py-10 ' style={{ backgroundColor: '#212122' }}>
+    <footer ref={footerRef} className='bg-gray-900 flex flex-col justify-center items-center py-10 ' style={{ backgroundColor: '#212122' }}>
 
       <p className='text-center text-lg text-white tracking-widest'>cityscape@copyright</p>
       <div className=" flex justify-center items-center text-main-primary lg:text-white">

@@ -1,41 +1,28 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faMobileAlt  } from "@fortawesome/free-solid-svg-icons";
-import { useAppState } from "../context/AppContext";
+import { useMenu } from "../context/MenuContext";
+import { useSection } from "../context/SectionsContext";
 import { useEffect  } from "react";
 
-const data = [
-  {
-    text:"home" , path: ""
-  },
-  {
-    text:"about" , path: "about"
-  },
-  {
-    text:"our services" , path: "services"
-  },
-  {
-    text:"projects" , path: "projects"
-  },
-  {
-    text:"contact us" , path: "contact-us"
-  },
-]
+import { pageSections } from "../data/sectoins";
 
-const NavigationLink = ({ children, href }) => {
+const NavigationLink = ({ children, sectionId }) => {
+  const {activeSectionId ,setActiveSectionId} = useSection()
   return (
-    <a href={`#${href}`}>  
-      <li className="lg:hover:text-main-primary uppercase text-base	">
+      <li 
+          className={` lg:hover:text-main-primary uppercase text-base cursor-pointer ${activeSectionId === sectionId ? "text-main-primary" : "text-white"} `}
+          onClick={() => { setActiveSectionId(sectionId) }} 
+          >
         {children}
       </li>
-    </a>
   )
 }
 
 
 const Navbar = () => {
   const [nav , setNav] = useState(false)
-  const { menu, showMenu , hideMenu} = useAppState()
+  const { menu, showMenu , hideMenu} = useMenu()
 
   useEffect(() => {
     window.addEventListener("scroll" , () => {
@@ -68,9 +55,9 @@ const Navbar = () => {
         <ul className="gap-5 hidden lg:flex">
 
             {
-              data.map(item => {
+              pageSections.map((section , ind) => {
                 return(
-                  <NavigationLink href={item.path} >{item.text}</NavigationLink>
+                  <NavigationLink key={ind} sectionId={section.sectionId} >{section.sectionName}</NavigationLink>
                 )
               })
             }
