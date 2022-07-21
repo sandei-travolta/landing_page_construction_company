@@ -4,7 +4,7 @@ import React from "react";
 const about = () => {
     return (
         <section id="about" className="bg-slate-100 pb-16 lg:pb-0">
-            <sectoin className="flex flex-row flex-wrap  lg:items-center lg:justify-center container max-w-screen-xl">
+            <section className="flex flex-row flex-wrap  lg:items-center lg:justify-center container max-w-screen-xl">
                 <div className="lg:w-3/5 py-16">
                     <h2 className="uppercase text-main-primary font-medium pb-4 text-xl text-center lg:text-start" style={{ letterSpacing: '7px' }}>about us</h2>
                     <h3 className="text-3xl font-bold pb-7 text-center lg:text-start">We Turn Ideas Into Reality</h3>
@@ -47,7 +47,7 @@ const about = () => {
 
                     </div>
                 </div>
-            </sectoin>
+            </section>
 
         </section>
     );

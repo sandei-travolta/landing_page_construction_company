@@ -3,9 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlassPlus  } from "@fortawesome/free-solid-svg-icons";
 
 
-const ProjectCard = ({city , service , image}) => {
+const ProjectCard = ({cardData , cardInd , handleClick}) => {
     return(
-      <div className="relative group overflow-hidden grow max-h-595 w-full sm:w-1/2 lg:w-1/4 m-5 sm:m-0" style={{height: "70vh"  }}>
+      <div 
+          className="relative group overflow-hidden grow max-h-595 w-full sm:w-1/2 lg:w-1/4 m-5 sm:m-0 cursor-pointer"
+           style={{height: "70vh"  }} 
+           onClick={() => handleClick(cardData , cardInd )}
+         
+           >
           <div 
           className="flex items-center justify-center absolute top-1/2 left-1/2 translate-x-96 
                   group-hover:-translate-x-1/2 -translate-y-1/2 transition-all duration-700
@@ -18,16 +23,16 @@ const ProjectCard = ({city , service , image}) => {
             
             <div className="w-full h-full relative">
               
-              <h2 className="text-white font-bold text-2xl tracking-wider p-3 mt-5">{city}</h2>
+              <h2 className="text-white font-bold text-2xl tracking-wider p-3 mt-5">{cardData.city}</h2>
               <h3 className="absolute text-white  uppercase font-light bottom-10 left-5 flext items-start  "
                   style={{letterSpacing: "10px"}}
                   >
-                {service}
+                {cardData.service}
        
                 </h3>
             </div>
         </div>
-        <img src={`/images/${image}`} alt="" width={480} height={780} className="object-fill"/>
+        <img src={cardData.image} alt="" className="w-full h-full object-fill"/>
       </div>
     )
   }

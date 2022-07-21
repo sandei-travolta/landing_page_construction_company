@@ -7,7 +7,7 @@ import Services from './sections/Services'
 import OurTeam from './sections/OurTeam'
 import ContactUs from './sections/ContactUs'
 import Clients from './sections/Clients'
-import Projects from './sections/Projects'
+import ProjectsGallery from './sections/Projects'
 import Footer from './sections/Footer'
 
 function App() {  
@@ -18,7 +18,7 @@ function App() {
       <Header />
       <About />
       <Services />
-      <Projects />
+      <ProjectsGallery />
       <OurTeam />
       <ContactUs />
       <Clients />

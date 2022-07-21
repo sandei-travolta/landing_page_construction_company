@@ -4,11 +4,28 @@ import { faBars, faMobileAlt  } from "@fortawesome/free-solid-svg-icons";
 import { useAppState } from "../context/AppContext";
 import { useEffect  } from "react";
 
+const data = [
+  {
+    text:"home" , path: ""
+  },
+  {
+    text:"about" , path: "about"
+  },
+  {
+    text:"our services" , path: "services"
+  },
+  {
+    text:"projects" , path: "projects"
+  },
+  {
+    text:"contact us" , path: "contact-us"
+  },
+]
 
 const NavigationLink = ({ children, href }) => {
   return (
     <a href={`#${href}`}>  
-      <li className="lg:hover:text-main-primary">
+      <li className="lg:hover:text-main-primary uppercase text-base	">
         {children}
       </li>
     </a>
@@ -49,11 +66,15 @@ const Navbar = () => {
         </div>
 
         <ul className="gap-5 hidden lg:flex">
-            <NavigationLink href=""> Home </NavigationLink>
-            <NavigationLink href="about"> About </NavigationLink>
-            <NavigationLink href="services"> Our Services </NavigationLink>
-            <NavigationLink href="projects"> Projects</NavigationLink>
-            <NavigationLink href="contact-us"> Contact Us</NavigationLink>
+
+            {
+              data.map(item => {
+                return(
+                  <NavigationLink href={item.path} >{item.text}</NavigationLink>
+                )
+              })
+            }
+
         </ul>
 
         <div>

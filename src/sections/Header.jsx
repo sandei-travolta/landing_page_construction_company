@@ -41,7 +41,7 @@ const Header = () => {
                         alt=''
                         initial={{opacity: 0}}
                         animate={{opacity: 1}}
-                        transition={{delay: 1 ,duration: 1 ,repeatDelay: 6, yoyo: Infinity}}
+                        transition={{delay: 1 ,duration: 1 ,repeatDelay: 4, yoyo: Infinity}}
                     
                     />
                 </div>
@@ -78,7 +78,7 @@ const Header = () => {
                         alt=''
                         initial={{opacity: 0}}
                         animate={{opacity: 1}}
-                        transition={{delay: 1 ,duration: 1 ,repeatDelay: 6, yoyo: Infinity}}
+                        transition={{delay: 1 ,duration: 1 ,repeatDelay: 4, yoyo: Infinity}}
                         />
                 </div>
             
