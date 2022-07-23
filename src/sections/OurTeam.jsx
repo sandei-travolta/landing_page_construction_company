@@ -6,7 +6,7 @@ import TeamData from '../data/ourTeam';
 const OurTeam = () => {
 
   return (
-    <section id='our-team' className='primary-section pt-16'>
+    <section id='our-team' className='primary-section pt-16 overflow-hidden'>
         <section 
             className='container max-w-screen-xl grid md:grid-cols-2 gap-5 md:grid-rows-6'
 

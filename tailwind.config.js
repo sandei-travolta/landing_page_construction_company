@@ -39,6 +39,10 @@ module.exports = {
       },
       zIndex:{
         "45":"45"
+      },
+      fontSize:{
+        "8xl": "8rem",
+        "7xl": "6rem"
       }
    
     },

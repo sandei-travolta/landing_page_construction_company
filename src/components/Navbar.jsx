@@ -37,7 +37,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className={` bg-main-black drop-shadow-sm shadow-white z-50  ${nav ? "lg:bg-main-black" : "lg:bg-transparent"}  text-white fixed top-0 w-full transition-colors duration-300`}>
+    <nav className={` bg-main-black drop-shadow-sm shadow-white z-50  ${nav ? "lg:bg-main-black" : "lg:bg-transparent"}  text-white fixed top-0 w-screen transition-colors duration-300`}>
       <div className="container max-w-screen-2xl flex justify-between items-center h-16 lg:flex-row-reverse text-lg">
         
         <div>

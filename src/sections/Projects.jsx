@@ -69,8 +69,9 @@ const ProjectGallery = () => {
 
 
   return (
-    <motion.section 
-         id="projects"
+    <section id="projects" className="overflow-hidden w-screen">
+          <motion.section 
+         
          className="primary-section flex flex-col items-center"
          whileInView="visible"
          initial="hidden"
@@ -107,6 +108,7 @@ const ProjectGallery = () => {
        </motion.button>
 
     </motion.section>
+    </section>
   )
 }
 

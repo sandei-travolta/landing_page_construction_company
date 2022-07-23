@@ -24,7 +24,7 @@ const About = () => {
 
 
     return (
-        <section  id="about" className="primary-section bg-slate-100 pb-16 lg:pb-0">
+        <section  id="about" className="primary-section bg-slate-100 pb-16 lg:pb-0 overflow-hidden">
             <section className="flex flex-row flex-wrap  lg:items-center lg:justify-center container max-w-screen-xl">
                 <div  className="lg:w-3/5 py-16">
                 <motion.div 

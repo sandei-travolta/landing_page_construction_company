@@ -6,7 +6,7 @@ import servicesData  from '../data/services';
 
 const Services = () => {
     return (
-        <section id='services' className='primary-section pt-16 ' >
+        <section id='services' className='primary-section pt-16 overflow-hidden w-screen ' >
             <section className="lg:container lg:max-w-screen-xl">
                 <div>
                     <h2 className="uppercase text-main-primary font-medium pb-4 text-xl text-center lg:text-start" style={{ letterSpacing: '7px' }}>our services</h2>
@@ -27,7 +27,7 @@ const Services = () => {
                             backgroundSize: "cover",
                             backgroundPosition: 'center'
                         }}
-                        initial={{opacity: 0 , x: -400}}
+                        initial={{opacity: 0 , x: -100}}
                         whileInView={{opacity: 1 , x : 0}}
                         transition={{duration: 1.5 , ease: "easeOut" , delay: 0.5}}
                         viewport={{once: true}}
@@ -38,7 +38,7 @@ const Services = () => {
                         <motion.div 
                               className='flex justify-center items-center px-7 py-15 '
                               style={{minHeight: "250px"}}
-                              initial={{opacity: 0 , x: 300}}
+                              initial={{opacity: 0 , x: 100}}
                               whileInView={{opacity: 1 , x: 0}}
                               transition={{duration: 1.5 , ease: "easeOut"}}
                               viewport={{once: true}}

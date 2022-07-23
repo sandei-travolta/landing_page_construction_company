@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 const Clients = () => {
   return (
-    <section className='w-full bg-main-black h-fit py-32 mt-16 flex flex-col items-center justify-center '>
+    <section className='w-full bg-main-black h-fit py-32 mt-16 flex flex-col items-center justify-center overflow-hidden'>
         <div className='pb-10'>
         <h2 
         className="uppercase text-main-primary font-medium pb-4 text-xl text-center " style={{letterSpacing:'7px'}}>our clients</h2>

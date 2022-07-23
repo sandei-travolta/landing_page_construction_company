@@ -11,7 +11,8 @@ const ContactUs = () => {
  
 
   return (
-    <motion.section id='contact-us' className='primary-section pt-16'
+    <section id='contact-us' className='primary-section pt-16 overflow-hidden'>
+            <motion.section 
     whileInView="visible"
     initial="hidden"
     variants={contactSectionVariants}
@@ -67,6 +68,7 @@ const ContactUs = () => {
 
         </section>
     </motion.section>
+    </section>
   )
 }
 
