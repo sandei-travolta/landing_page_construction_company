@@ -5,13 +5,13 @@ import { useMenu } from "../context/MenuContext";
 import { useSection } from "../context/SectionContext";
 import { useEffect  } from "react";
 
-import { pageSections } from "../data/sectoins";
+import  pageSections from "../data/sections";
 
 const NavigationLink = ({ children, sectionId }) => {
-  const {activeSectionId ,setActiveSectionId} = useSection()
+  const {activeSectionId } = useSection()
   return (
       <li 
-          className={` lg:hover:text-main-primary uppercase text-base cursor-pointer ${activeSectionId === sectionId ? "text-main-primary" : "text-white"} `}
+          className={`transition-all duration-700 lg:hover:text-main-primary uppercase text-base cursor-pointer ${activeSectionId === sectionId ? "text-main-primary" : "text-white"} `}
           onClick={() => { document.getElementById(sectionId).scrollIntoView( {behavior: "smooth"}) }} 
           >
         {children}

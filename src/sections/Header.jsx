@@ -108,13 +108,3 @@ const Header = () => {
 }
 
 export default Header
-
-{/* <style jsx="true">{`
-h2.stroke-heading {
-   background-image :url('../images/main-slider-3.jpg'); 
-   font-size:200px;
-   background-clip: text;
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-       }
-`}</style> */}

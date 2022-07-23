@@ -1,4 +1,4 @@
-export const data = [
+const data = [
     {
       city: "Hangzhou, China", service: "project management", image: "/images/gallery-img-1.jpg"
     },
@@ -12,3 +12,6 @@ export const data = [
       city: "Reggio Emilia, Italy", service: "facade engineering", image: "/images/gallery-img-4.jpg"
     }
   ]
+
+
+  export default data

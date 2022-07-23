@@ -1,6 +1,6 @@
 import { faCity , faPenToSquare , faCompassDrafting , faMountainCity} from "@fortawesome/free-solid-svg-icons";
 
-export const servicesData = [
+const servicesData = [
     {
         heading:"construction management",
         text:"Our project management is essential. We're using the most time and iterations efficient life cycles methods for that to complete all the projects on time.",
@@ -22,3 +22,5 @@ export const servicesData = [
         icon:faPenToSquare,
     }
 ]
+
+export default servicesData

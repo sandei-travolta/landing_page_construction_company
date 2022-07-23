@@ -1,6 +1,6 @@
 import React from 'react'
 import TeamMemberCard from '../components/TeamMemberCard'
-import { TeamData } from '../data/ourTeam';
+import TeamData from '../data/ourTeam';
 
 
 const OurTeam = () => {

@@ -3,7 +3,7 @@ import { faTwitter, faFacebookF, faInstagram } from "@fortawesome/free-brands-sv
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {  useMenu } from "../context/MenuContext";
 import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
-import { pageSections } from "../data/sectoins";
+import  pageSections from "../data/sections";
 import { useSection } from "../context/SectionContext";
 
 const NavigationLink = ({ children,  sectionId }) => {

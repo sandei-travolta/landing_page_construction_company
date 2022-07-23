@@ -1,7 +1,7 @@
 import React from 'react'
 import ServiceCard from '../components/ServiceCard';
 import { motion } from 'framer-motion';
-import { servicesData } from '../data/services';
+import servicesData  from '../data/services';
 
 
 const Services = () => {

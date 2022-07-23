@@ -1,5 +1,5 @@
-// module.exports = {
-//     resolve: {
-//         fallback: { process : require.resolve("process/browser") }
-//     }
-// }
+module.exports = {
+    resolve: {
+        fallback: { process : require.resolve("process/browser") }
+    }
+}

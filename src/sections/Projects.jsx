@@ -1,9 +1,8 @@
 import ProjectCard from "../components/ProjectCard"
 import Modal from "../components/Gallery"
 import React, { useState  } from 'react';
-import { data } from "../data/projects";
+import data from "../data/projects";
 import { motion  } from "framer-motion";
-import { useSection } from '../context/SectionContext';
 
 const ContainerVariants = {
   hidden: { },

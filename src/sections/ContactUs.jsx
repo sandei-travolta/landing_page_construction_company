@@ -1,10 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight  } from "@fortawesome/free-solid-svg-icons";
-import { motion ,  } from "framer-motion";
-
-
-
+import { motion   } from "framer-motion";
 const contactSectionVariants = {
     visible: { scale: 1, transition: { duration: 1.5 , ease: "easeOut"} },
     hidden: { scale: 0 }

@@ -8,11 +8,9 @@ const menuContext = createContext()
     const showMenu = () => setMenu(true)
     const hideMenu = () => setMenu(false)
 
-  
-
 
     return (
-        <menuContext.Provider value={{showMenu , hideMenu , menu }} >
+        <menuContext.Provider value={{showMenu , hideMenu , menu  }} >
             {children}
         </menuContext.Provider>
     )
