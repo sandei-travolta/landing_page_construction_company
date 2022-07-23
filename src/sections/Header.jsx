@@ -67,7 +67,7 @@ const Header = () => {
                     </div>
                     <div className='sub-slider absolute h-2/3  w-1/2 z-20 -translate-x-1/2 bottom-24 hidden lg:block max-w-350 max-w-80  2xl:max-w-600'  >
                         <motion.img
-                            className='main-slider-1 absolute w-full h-full object-cover	'
+                            className='absolute w-full h-full object-cover	'
                             src='/images/sub-slider-1.jpg'
                         />
                         <motion.img
@@ -76,7 +76,7 @@ const Header = () => {
                             alt=''
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 1, duration: 1, repeatDelay: 4, repeat: Infinity }}
+                            transition={{ delay: 1, duration: 1, repeatDelay: 4, yoyo: Infinity }}
 
                         />
                     </div>
