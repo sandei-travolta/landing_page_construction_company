@@ -11,7 +11,7 @@ const NavigationLink = ({ children, sectionId }) => {
   const {activeSectionId } = useSection()
   return (
       <li 
-          className={`transition-all duration-700 lg:hover:text-main-primary uppercase text-base cursor-pointer ${activeSectionId === sectionId ? "text-main-primary" : "text-white"} `}
+          className={`transition-colors duration-300 lg:hover:text-main-primary uppercase text-base cursor-pointer ${activeSectionId === sectionId ? "text-main-primary" : "text-white"} `}
           onClick={() => { document.getElementById(sectionId).scrollIntoView( {behavior: "smooth"}) }} 
           >
         {children}

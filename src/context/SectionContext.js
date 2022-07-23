@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 
 
@@ -8,17 +8,6 @@ const SectionProvider = ({children}) =>{
 
     const [activeSectionId , setActiveSectionId]  = useState("home")
 
-
-
-    useEffect(() => {
-       console.log(activeSectionId)
-    
-
-
-    } , [activeSectionId])
-
-
-      
 
 
     return (

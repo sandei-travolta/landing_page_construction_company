@@ -59,6 +59,7 @@ const ContactUs = () => {
                             initial={{y: 40 , opacity:0}}
                             animate={{y:0 , opacity:1}}
                             transition={{delay:2  ,duration: 0.5, ease: "easeOut"}}
+                            
                             ><span className="-mt-1 mr-2" >Send</span> <FontAwesomeIcon icon={faAngleRight} />
                     </motion.button>        
                 </form>
