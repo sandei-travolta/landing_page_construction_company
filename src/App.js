@@ -16,6 +16,7 @@ import { useSection } from './context/SectionContext';
 
 function App() {  
   const { setActiveSectionId} = useSection()
+  
   const setActiveSection = (id) => {
     setActiveSectionId(id)
   }
@@ -36,7 +37,7 @@ function App() {
 
 
  
-      }  , [])
+      })
   return (
     <div >
       <Navbar />
