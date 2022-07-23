@@ -1,13 +1,25 @@
 import React from 'react'
-import {motion} from "framer-motion"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight  } from "@fortawesome/free-solid-svg-icons";
+import { motion ,  } from "framer-motion";
 
 
 
+const contactSectionVariants = {
+    visible: { scale: 1, transition: { duration: 1.5 , ease: "easeOut"} },
+    hidden: { scale: 0 }
+  };
 const ContactUs = () => {
+
+ 
+
   return (
-    <section id='contact-us' className='pt-16'>
+    <motion.section id='contact-us' className='primary-section pt-16'
+    whileInView="visible"
+    initial="hidden"
+    variants={contactSectionVariants}
+    viewport={{once: true}}
+    >
         <section className='container max-w-screen-xl'>
             <div className='flex flex-col items-center justify-center'>
                 <h2 className="uppercase text-main-primary font-medium pb-4 text-xl " style={{letterSpacing:'7px'}}>contact our team</h2>
@@ -56,7 +68,7 @@ const ContactUs = () => {
             </div>
 
         </section>
-    </section>
+    </motion.section>
   )
 }
 

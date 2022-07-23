@@ -1,21 +1,28 @@
 import ProjectCard from "../components/ProjectCard"
 import Modal from "../components/Gallery"
-import React, { useState } from 'react';
-import { motion } from "framer-motion";
-const data = [
-  {
-    city: "Hangzhou, China", service: "project management", image: "/images/gallery-img-1.jpg"
-  },
-  {
-    city: "Los Angeles,  ,United  States", service: "architectural services", image: "/images/gallery-img-2.jpg"
-  },
-  {
-    city: "Montreal,Canada", service: "pre construction", image: "/images/gallery-img-3.jpg"
-  },
-  {
-    city: "Reggio Emilia, Italy", service: "facade engineering", image: "/images/gallery-img-4.jpg"
-  }
-]
+import React, { useState  } from 'react';
+import { data } from "../data/projects";
+import { motion  } from "framer-motion";
+import { useSection } from '../context/SectionContext';
+
+const ContainerVariants = {
+  hidden: { },
+  visible: { },
+}
+
+const projectsSectionVariants = {
+  hidden: { opacity: 0 , y: 200},
+  visible: { opacity: 1 , y: 0 , transition: { duration: 1.5 , ease: "easeOut"} },
+}
+
+const buttonVariants = {
+  hidden: {y: 40 , opacity:0},
+  visible: {
+      y:0 ,
+      opacity:1
+    , transition: { duration: 1.5 , delay: 1, ease: "easeOut"} }
+}
+
 
 const ProjectGallery = () => {
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -63,8 +70,20 @@ const ProjectGallery = () => {
 
 
   return (
-    <section className="flex flex-col items-center">
-          <section id="projects" className="flex flex-wrap lg:flex-nowrap pt-16">
+    <motion.section 
+         id="projects"
+         className="primary-section flex flex-col items-center"
+         whileInView="visible"
+         initial="hidden"
+         variants={ContainerVariants}
+         viewport={{once: true}}
+
+         >
+          <motion.section 
+           className="flex flex-wrap lg:flex-nowrap pt-16"
+           variants={projectsSectionVariants}
+ 
+           >
       {
         data.map((cardData, cardInd) => {
           return (
@@ -79,18 +98,16 @@ const ProjectGallery = () => {
       }
 
       {currentImg && <Modal currentImg={currentImg} setCurrentImg={setCurrentImg} nextImg={nextImg} previousImg={previousImg}/>}
-    </section>
-    <motion.button 
+        </motion.section>
+        <motion.button 
             className='my-14 font-semibold capitalize text-xl mx-auto px-8 py-2  flex items-center border-2 border-main-primary rounded-full text-main-primary hover:text-white hover:bg-main-primary transition-colors duration-300 '
-            initial={{y: 40 , opacity:0}}
-            animate={{y:0 , opacity:1}}
-            transition={{delay:2  ,duration: 0.5, ease: "easeOut"}}
+            variants={buttonVariants}
             onClick={() => handleClick(data[0] , 0)}
       >
          view in gallery
-     </motion.button>
+       </motion.button>
 
-    </section>
+    </motion.section>
   )
 }
 

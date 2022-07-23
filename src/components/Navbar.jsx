@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faMobileAlt  } from "@fortawesome/free-solid-svg-icons";
 import { useMenu } from "../context/MenuContext";
-import { useSection } from "../context/SectionsContext";
+import { useSection } from "../context/SectionContext";
 import { useEffect  } from "react";
 
 import { pageSections } from "../data/sectoins";
@@ -12,7 +12,7 @@ const NavigationLink = ({ children, sectionId }) => {
   return (
       <li 
           className={` lg:hover:text-main-primary uppercase text-base cursor-pointer ${activeSectionId === sectionId ? "text-main-primary" : "text-white"} `}
-          onClick={() => { setActiveSectionId(sectionId) }} 
+          onClick={() => { document.getElementById(sectionId).scrollIntoView( {behavior: "smooth"}) }} 
           >
         {children}
       </li>

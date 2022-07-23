@@ -4,15 +4,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {  useMenu } from "../context/MenuContext";
 import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 import { pageSections } from "../data/sectoins";
-import { useSection } from "../context/SectionsContext";
+import { useSection } from "../context/SectionContext";
 
 const NavigationLink = ({ children,  sectionId }) => {
-    const {activeSectionId ,setActiveSectionId} = useSection()
+    const {activeSectionId } = useSection()
 
     return (
             <li 
                 className={`cursor-pointer uppercase hover:bg-main-primary px-4 py-3 transition-colors duration-300 ${activeSectionId === sectionId ? "bg-main-primary" : "bg-main-black"} `}
-                onClick={() => { setActiveSectionId(sectionId) }} 
+                onClick={() => { document.getElementById(sectionId).scrollIntoView( {behavior: "smooth"}) }} 
                 >
                 {children}
             </li>
@@ -25,7 +25,7 @@ const SideBar = () => {
 
     return (
         <div 
-            className={`fixed -left-80 top-16 w-80 h-screen bg-main-black z-40 text-white lg:hidden transition-transform duration-300 ${menu ? "translate-x-80" : ""}
+            className={`fixed -left-80 top-16 w-80 h-screen bg-main-black z-50 text-white lg:hidden transition-transform duration-300 ${menu ? "translate-x-80" : ""}
           ` }>
             <div className="flex flex-col justify-between h-full">
                 <ul className="flex flex-col ">

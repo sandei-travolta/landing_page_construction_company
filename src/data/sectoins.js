@@ -12,6 +12,9 @@ export const pageSections = [
       sectionName:"projects" , sectionId: "projects"
     },
     {
+      sectionName:"our team" , sectionId: "our-team"
+    },
+    {
       sectionName:"contact us" , sectionId: "contact-us"
     },
   ]
