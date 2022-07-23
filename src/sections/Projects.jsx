@@ -69,10 +69,10 @@ const ProjectGallery = () => {
 
 
   return (
-    <section id="projects" className="overflow-hidden w-screen">
+    <section id="projects" className=" primary-section overflow-hidden w-screen">
           <motion.section 
          
-         className="primary-section flex flex-col items-center"
+         className=" flex flex-col items-center"
          whileInView="visible"
          initial="hidden"
          variants={ContainerVariants}
