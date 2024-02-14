@@ -48,7 +48,7 @@ const Navbar = () => {
                 />
           <div className="hidden lg:block">
             <FontAwesomeIcon icon={faMobileAlt} className="pr-2 text-main-primary"/>
-            <span>1-300-123-123</span>
+            <span>254-798-765-543</span>
           </div>
         </div>
 
